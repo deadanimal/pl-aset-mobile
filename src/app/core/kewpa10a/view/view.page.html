@@ -1,0 +1,80 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-button (click)="dismissModal()">
+        <ion-icon slot="icon-only" name="chevron-back-circle"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-title mode="ios">KEW.PA 10a No.{{kewpa10a.id}}</ion-title>
+
+    <ion-buttons slot="end">
+      <ion-button (click)="logout()">
+        <ion-icon slot="icon-only" name="log-out-outline"></ion-icon>
+      </ion-button> 
+    </ion-buttons> 
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-content>
+    <div class="card-body">
+      <ion-content class="content">
+        <br>
+        <br>
+        <div class="item-start">
+          <ion-badge color="primary" style="border-radius: 110apx; padding: 4px;"> KEWPA 10a </ion-badge>
+        </div>
+
+        <div >
+          <form>
+            <ion-list class="ion-no-margin list-core" mode="ios">
+              <ion-item class="item-form" lines="none">
+			    	    <ion-label position="stacked" mode="ios">No Siri Pendaftaran</ion-label>
+                <ion-input placeholder="" value="{{kewpa10a.no_siri_pendaftaran}}" mode="ios" readonly></ion-input>
+			        </ion-item>
+              <ion-item class="item-form" lines="none">
+			    	    <ion-label position="stacked" mode="ios">Tarikh Kerosakan</ion-label>
+                <ion-datetime class="small-font" value="{{kewpa10a.tarikh_kerosakan}}" display-timezone="utc" readonly></ion-datetime>
+			        </ion-item>
+              <ion-item class="item-form" lines="none">
+			    	    <ion-label position="stacked" mode="ios">Perihal Kerosakan</ion-label>
+			    	    <ion-input placeholder="" value="{{kewpa10a.perihal_kerosakan}}" mode="ios" readonly></ion-input>
+			        </ion-item>
+
+              <ion-item class="item-form" lines="none">
+			    	    <ion-label position="stacked" mode="ios">Jumlah Kos Penyelenggaraan (RM)</ion-label>
+			    	    <ion-input placeholder="" value="{{kewpa10a.jumlah_kos_penyelenggaraan}}" mode="ios" readonly></ion-input>
+			        </ion-item>
+
+              <ion-item class="item-form" lines="none">
+			    	    <ion-label position="stacked" mode="ios">Anggaran Kos (RM)</ion-label>
+			    	    <ion-input placeholder="" value="{{kewpa10a.anggaran_kos}}" mode="ios" readonly></ion-input>
+			        </ion-item>
+
+              <ion-item class="item-form" lines="none">
+			    	    <ion-label position="stacked" mode="ios">Syor Ulasan</ion-label>
+			    	    <ion-input placeholder="" value="{{kewpa10a.syor_ulasan}}" mode="ios" readonly></ion-input>
+			        </ion-item>
+
+
+              <ion-item class="item-form" lines="none">
+			    	    <ion-label position="stacked" mode="ios">Ulasan</ion-label>
+			    	    <ion-input placeholder="" value="{{kewpa10a.ulasan}}" mode="ios" readonly></ion-input>
+			        </ion-item>
+
+              <ion-item class="item-form" lines="none">
+			    	    <ion-label position="stacked" mode="ios">Pengguna Terakhir</ion-label>
+			    	    <ion-input placeholder="" value="{{kewpa10a.pengguna_terakhir}}" mode="ios" readonly></ion-input>
+			        </ion-item>
+
+
+                             
+            </ion-list>
+          </form>
+        </div>
+      </ion-content>
+    </div>
+
+  </ion-content>
+</ion-content>

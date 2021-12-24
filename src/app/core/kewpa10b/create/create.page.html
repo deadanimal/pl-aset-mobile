@@ -1,0 +1,113 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-button (click)="navigateToPage('/core/kewpa10b-list')">
+        <ion-icon slot="icon-only" name="chevron-back-circle"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-title mode="ios">KEW.PA 10 B</ion-title>
+
+    <ion-buttons slot="end">
+      <ion-button (click)="logout()">
+        <ion-icon slot="icon-only" name="log-out-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+  <ion-content>
+    <div class="card-body">
+      <ion-content class="content">
+        <br>
+        <br>
+        <div class="item-start">
+          <ion-badge color="primary" style="border-radius: 110bpx; padding: 4px;"> KEWPA 10b </ion-badge>
+        </div>
+
+        <div >
+          <form [formGroup]="kewpa10bForm">
+            <ion-list class="ion-no-margin list-core" mode="ios">
+              <ion-item class="item-form" lines="none">
+			    	    <ion-label position="stacked" mode="ios">Nombor Wo</ion-label>
+			    	    <ion-input placeholder="" mode="ios" formControlName="no_wo"></ion-input>
+			        </ion-item>
+              <ion-item class="item-form" lines="none">
+			    	    <ion-label position="stacked" mode="ios">No. Plet</ion-label>
+			    	    <ion-input placeholder="" mode="ios" formControlName="plet_no_jenis_kenderaan"></ion-input>
+			        </ion-item>
+              <ion-item class="item-form" lines="none">
+			    	    <ion-label position="stacked" mode="ios">Pengguna Terakhir</ion-label>
+			    	    <ion-input placeholder="" mode="ios" formControlName="pengguna_terakhir"></ion-input>
+			        </ion-item>
+
+              <ion-item class="item-form" lines="none">
+			    	    <ion-label position="stacked" mode="ios">Tarikh Rosak</ion-label>
+                <ion-datetime class="small-font" value="" display-timezone="utc" formControlName="tarikh_rosak"></ion-datetime>
+			        </ion-item>
+
+              <ion-item class="item-form" lines="none">
+			    	    <ion-label position="stacked" mode="ios">Bil</ion-label>
+			    	    <ion-input placeholder="" mode="ios" formControlName="bil"></ion-input>
+			        </ion-item>
+
+              <ion-item class="item-form" lines="none">
+			    	    <ion-label position="stacked" mode="ios">Perihal Rosak</ion-label>
+			    	    <ion-input placeholder="" mode="ios" formControlName="perihal_rosak"></ion-input>
+			        </ion-item>
+
+
+              <ion-item class="item-form" lines="none">
+			    	    <ion-label position="stacked" mode="ios">Kos Penyelenggaraan Dahulu(RM)</ion-label>
+			    	    <ion-input placeholder="" mode="ios" formControlName="kos_penyelenggaraan_dulu"></ion-input>
+			        </ion-item>
+
+              <ion-item class="item-form" lines="none">
+			    	    <ion-label position="stacked" mode="ios">Anggaran Kos Penyelenggaraan(RM)</ion-label>
+			    	    <ion-input placeholder="" mode="ios" formControlName="anggaran_kos_penyelenggaraan"></ion-input>
+			        </ion-item>
+
+              <ion-item class="item-form" lines="none">
+			    	    <ion-label position="stacked" mode="ios">Syor Ulasan</ion-label>
+			    	    <ion-input placeholder="" mode="ios" formControlName="syor_ulasan"></ion-input>
+			        </ion-item>
+
+              <ion-item class="item-form" lines="none">
+			    	    <ion-label position="stacked" mode="ios">Ulasan</ion-label>
+			    	    <ion-input placeholder="" mode="ios" formControlName="ulasan"></ion-input>
+			        </ion-item>
+
+              <ion-item class="item-form" lines="none">
+			    	    <ion-label position="stacked" mode="ios">Pembaikan Dalaman Luar</ion-label>
+			    	    <ion-input placeholder="" mode="ios" formControlName="pembaikan_dalaman_luar"></ion-input>
+			        </ion-item>
+
+              <ion-item class="item-form" lines="none">
+			    	    <ion-label position="stacked" mode="ios">Alat Ganti</ion-label>
+			    	    <ion-input placeholder="" mode="ios" formControlName="alatganti"></ion-input>
+			        </ion-item>
+
+               <br>
+               <div padding>
+                 <div *ngIf="updateMode === false" class="card" style="padding: 20px;">
+                  <ion-button color="primary" size="medium" [disabled]="kewpa10bForm.invalid" (click)="submitKewpa10b()"
+                    expand="block">
+                    Simpan</ion-button>
+                 </div>
+
+                 <div *ngIf="updateMode === true" class="card" style="padding: 20px;">
+                  <ion-button color="primary" size="medium" [disabled]="kewpa10bForm.invalid" (click)="submitKewpa10bUpdate()"
+                    expand="block">
+                    Simpan</ion-button>
+                 </div>
+
+
+               </div>
+            </ion-list>
+          </form>
+        </div>
+      </ion-content>
+    </div>
+
+  </ion-content>
+</ion-content>

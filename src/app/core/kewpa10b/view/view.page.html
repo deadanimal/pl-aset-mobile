@@ -1,0 +1,97 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-button (click)="dismissModal()">
+        <ion-icon slot="icon-only" name="chevron-back-circle"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-title mode="ios">KEW.PA 10 B No.{{kewpa10b.id}}</ion-title>
+
+    <ion-buttons slot="end">
+      <ion-button (click)="logout()">
+        <ion-icon slot="icon-only" name="log-out-outline"></ion-icon>
+      </ion-button> 
+    </ion-buttons> 
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-content>
+    <div class="card-body">
+      <ion-content class="content">
+        <br>
+        <br>
+        <div class="item-start">
+          <ion-badge color="primary" style="border-radius: 110bpx; padding: 4px;"> KEWPA 10b </ion-badge>
+        </div>
+
+        <div >
+          <form>
+            <ion-list class="ion-no-margin list-core" mode="ios">
+              <ion-item class="item-form" lines="none">
+			    	    <ion-label position="stacked" mode="ios">Nombor Wo</ion-label>
+                <ion-input placeholder="" mode="ios" value="{{kewpa10b.no_wo}}" readonly></ion-input>
+			        </ion-item>
+              <ion-item class="item-form" lines="none">
+			    	    <ion-label position="stacked" mode="ios">No. Plet</ion-label>
+                <ion-input placeholder="" mode="ios" value="{{kewpa10b.plet_no_jenis_kenderaan}}" readonly></ion-input>
+			        </ion-item>
+              <ion-item class="item-form" lines="none">
+			    	    <ion-label position="stacked" mode="ios">Pengguna Terakhir</ion-label>
+                <ion-input placeholder="" mode="ios" value="{{kewpa10b.pengguna_terakhir}}" readonly></ion-input>
+			        </ion-item>
+
+              <ion-item class="item-form" lines="none">
+			    	    <ion-label position="stacked" mode="ios">Tarikh Rosak</ion-label>
+                <ion-input placeholder="" mode="ios" value="{{kewpa10b.tarikh_rosak}}" readonly></ion-input>
+			        </ion-item>
+
+              <ion-item class="item-form" lines="none">
+			    	    <ion-label position="stacked" mode="ios">Bil</ion-label>
+                <ion-input placeholder="" mode="ios" value="{{kewpa10b.bil}}" readonly></ion-input>
+			        </ion-item>
+
+              <ion-item class="item-form" lines="none">
+			    	    <ion-label position="stacked" mode="ios">Perihal Rosak</ion-label>
+                <ion-input placeholder="" mode="ios" value="{{kewpa10b.perihal_rosak}}" readonly></ion-input>
+			        </ion-item>
+
+
+              <ion-item class="item-form" lines="none">
+			    	    <ion-label position="stacked" mode="ios">Kos Penyelenggaraan Dahulu(RM)</ion-label>
+                <ion-input placeholder="" mode="ios" value="{{kewpa10b.kos_penyelenggaraan_dulu}}" readonly></ion-input>
+			        </ion-item>
+
+              <ion-item class="item-form" lines="none">
+			    	    <ion-label position="stacked" mode="ios">Anggaran Kos Penyelenggaraan(RM)</ion-label>
+                <ion-input placeholder="" mode="ios" value="{{kewpa10b.anggaran_kos_penyelenggaraan}}" readonly></ion-input>
+			        </ion-item>
+
+              <ion-item class="item-form" lines="none">
+			    	    <ion-label position="stacked" mode="ios">Syor Ulasan</ion-label>
+                <ion-input placeholder="" mode="ios" value="{{kewpa10b.syor_ulasan}}" readonly></ion-input>
+			        </ion-item>
+
+              <ion-item class="item-form" lines="none">
+			    	    <ion-label position="stacked" mode="ios">Ulasan</ion-label>
+                <ion-input placeholder="" mode="ios" value="{{kewpa10b.ulasan}}"readonly></ion-input>
+			        </ion-item>
+
+              <ion-item class="item-form" lines="none">
+			    	    <ion-label position="stacked" mode="ios">Pembaikan Dalaman Luar</ion-label>
+                <ion-input placeholder="" mode="ios" value="{{kewpa10b.pembaikan_dalaman_luar}}" readonly></ion-input>
+			        </ion-item>
+
+              <ion-item class="item-form" lines="none">
+			    	    <ion-label position="stacked" mode="ios">Alat Ganti</ion-label>
+                <ion-input placeholder="" mode="ios" value="{{kewpa10b.alatganti}}" readonly></ion-input>
+			        </ion-item>
+            </ion-list>
+          </form>
+        </div>
+      </ion-content>
+    </div>
+
+  </ion-content>
+</ion-content>

@@ -1,0 +1,38 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-button (click)="navigateToPage('/core/dashboard')">
+        <ion-icon slot="icon-only" name="chevron-back-circle"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-title mode="ios">KEW.PA 10 B</ion-title>
+
+    <ion-buttons slot="end">
+      <ion-button (click)="logout()">
+        <ion-icon slot="icon-only" name="log-out-outline"></ion-icon>
+      </ion-button> </ion-buttons> </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div id="container" class="background">
+
+    <ion-toolbar>
+      <ion-buttons slot="secondary">
+        <ion-button (click)="navigateToPage('/core/kewpa10b-create')">
+          <ion-icon slot="icon-only" name="add"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+      <ion-title>Senarai Borang</ion-title>
+    </ion-toolbar>
+    <ion-list *ngFor="let i of kewpa10b">
+      <ion-item>
+        <ion-label>No Rujukan {{i.id}}</ion-label>
+        <ion-icon class="item-right" (click)="viewKewpa10b(i)" name="eye-outline"></ion-icon>
+        <ion-icon class="item-right" (click)="editKewpa10b(i)" name="create"></ion-icon>
+        <ion-icon class="item-right" (click)="deleteKewpa10b(i)" name="trash-bin-outline"></ion-icon>
+      </ion-item>
+    </ion-list>
+  </div>
+
+</ion-content>

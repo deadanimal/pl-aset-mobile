@@ -1,0 +1,31 @@
+.background {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+ion-card {
+  border-radius: 20px;
+  justify-content: center;
+  text-align: center;
+  box-shadow: 2px -3px 9px -6px black;
+  padding: 15px auto;
+
+
+}
+
+ion-list {
+  margin-top: 80px;
+  margin: 80px 30px 10px;
+}
+
+
+
+h3 {
+  margin: 0;
+}
+
+.item-right {
+  display: flex;
+  justify-content: flex-end;
+
+}
