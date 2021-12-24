@@ -59,17 +59,9 @@ cordova.define('cordova/plugin_list', function(require, exports, module) {
       ]
     },
     {
-      "id": "cordova-plugin-qrscanner.QRScanner",
-      "file": "plugins/cordova-plugin-qrscanner/www/www.min.js",
-      "pluginId": "cordova-plugin-qrscanner",
-      "clobbers": [
-        "QRScanner"
-      ]
-    },
-    {
-      "id": "cordova-plugin-qr-barcode-scanner.BarcodeScanner",
-      "file": "plugins/cordova-plugin-qr-barcode-scanner/www/barcodescanner.js",
-      "pluginId": "cordova-plugin-qr-barcode-scanner",
+      "id": "phonegap-plugin-barcodescanner.BarcodeScanner",
+      "file": "plugins/phonegap-plugin-barcodescanner/www/barcodescanner.js",
+      "pluginId": "phonegap-plugin-barcodescanner",
       "clobbers": [
         "cordova.plugins.barcodeScanner"
       ]
@@ -83,7 +75,6 @@ cordova.define('cordova/plugin_list', function(require, exports, module) {
     "cordova-plugin-splashscreen": "5.0.2",
     "cordova-plugin-ionic-webview": "4.2.1",
     "cordova-plugin-ionic-keyboard": "2.2.0",
-    "cordova-plugin-qrscanner": "3.0.1",
-    "cordova-plugin-qr-barcode-scanner": "8.0.3"
+    "phonegap-plugin-barcodescanner": "8.1.0"
   };
 });

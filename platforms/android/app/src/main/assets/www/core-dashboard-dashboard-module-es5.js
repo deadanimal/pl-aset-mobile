@@ -21,7 +21,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<ion-header class=\"ion-no-border\">\n  <ion-toolbar color=\"primary\">\n    <ion-buttons slot=\"start\">\n      <ion-button href=\"/core/dashboard\">\n        <ion-icon slot=\"icon-only\" name=\"chevron-back-circle\"></ion-icon>\n      </ion-button>\n    </ion-buttons>\n\n    <ion-title mode=\"ios\">Super Admin</ion-title>\n\n    <ion-buttons slot=\"end\">\n      <ion-button (click)=\"logout()\">\n        <ion-icon slot=\"icon-only\" name=\"log-out-outline\"></ion-icon>\n      </ion-button>\n    </ion-buttons>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content [fullscreen]=\"true\">\n  <div id=\"container\" class=\"background\">\n    <ion-list>\n      <ion-card color=\"primary\" (click)=\"navigateToPage('/core/kewpa8-list')\">\n        <ion-card-content>\n          <ion-text color=\"light\">\n            <ion-icon size=\"large\" name=\"add-circle-outline\"></ion-icon>\n            <h3>KEW.PS 8</h3>\n          </ion-text>\n        </ion-card-content>\n      </ion-card>\n      <hr>\n      <ion-card color=\"primary\" (click)=\"navigateToPage('/core/kewpa9-list')\">\n        <ion-card-content>\n          <ion-text color=\"light\">\n            <ion-icon size=\"large\" name=\"add-circle-outline\"></ion-icon>\n            <h3>KEW.PA 9</h3>\n          </ion-text>\n        </ion-card-content>\n      </ion-card>\n      <hr>\n      <ion-card color=\"primary\" (click)=\"navigateToPage('/core/kewpa10a-list')\">\n        <ion-card-content>\n          <ion-text color=\"light\">\n            <ion-icon size=\"large\" name=\"add-circle-outline\"></ion-icon>\n            <h3>KEW.PA 10 A</h3>\n          </ion-text>\n        </ion-card-content>\n      </ion-card>\n      <hr>\n      <ion-card color=\"primary\" (click)=\"navigateToPage('/core/kewpa10b-list')\">\n        <ion-card-content>\n          <ion-text color=\"light\">\n            <ion-icon size=\"large\" name=\"add-circle-outline\"></ion-icon>\n            <h3>KEW.PA 10 B</h3>\n          </ion-text>\n        </ion-card-content>\n      </ion-card>\n    </ion-list>\n  </div>\n\n</ion-content>\n<!--<ion-header mode=\"ios\" class=\"ion-no-border\">\n  <ion-toolbar color=\"light\" mode=\"ios\">\n    <ion-title>Menu Utama</ion-title>\n  </ion-toolbar>\n</ion-header>\n<ion-content>\n\n    <ion-card color=\"light\" href=\"/kewpa8\">\n      <ion-card-content>\n        <ion-row>\n          <ion-col text-left>\n            <ion-label><b>KEW.PA-8</b></ion-label>\n\t\t      </ion-col>\n\n\t\t    </ion-row>\n      </ion-card-content>\n    </ion-card>\n\n    <ion-card color=\"light\" href=\"/kewpa9\">\n      <ion-card-content>\n        <ion-row>\n          <ion-col text-left>\n            <ion-label><b>KEW.PA-9</b></ion-label>\n\t\t      </ion-col>\n\n\t\t    </ion-row>\n      </ion-card-content>\n    </ion-card>\n\n    <ion-card color=\"light\" href=\"/kewpa10a\">\n      <ion-card-content>\n        <ion-row>\n          <ion-col text-left>\n            <ion-label><b>KEW.PA-10 A</b></ion-label>\n\t\t      </ion-col>\n\n\t\t    </ion-row>\n      </ion-card-content>\n    </ion-card>\n\n    <ion-card color=\"light\" href=\"/kewpa10b\">\n      <ion-card-content>\n        <ion-row>\n          <ion-col text-left>\n            <ion-label><b>KEW.PA-10 B</b></ion-label>\n\t\t      </ion-col>\n\n\t\t    </ion-row>\n      </ion-card-content>\n    </ion-card>\n\n\n\n</ion-content>-->\n";
+    __webpack_exports__["default"] = "<ion-header class=\"ion-no-border\">\n  <ion-toolbar color=\"primary\">\n    <ion-buttons slot=\"start\">\n      <ion-button href=\"/core/dashboard\">\n        <ion-icon slot=\"icon-only\" name=\"chevron-back-circle\"></ion-icon>\n      </ion-button>\n    </ion-buttons>\n\n    <ion-title mode=\"ios\">Super Admin</ion-title>\n\n    <ion-buttons slot=\"end\">\n      <ion-button (click)=\"logout()\">\n        <ion-icon slot=\"icon-only\" name=\"log-out-outline\"></ion-icon>\n      </ion-button>\n    </ion-buttons>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content [fullscreen]=\"true\">\n  <div id=\"container\" class=\"background\">\n    <ion-list>\n      <ion-card color=\"primary\" (click)=\"navigateToPage('/core/kewpa8-list')\">\n        <ion-card-content>\n          <ion-text color=\"light\">\n            <ion-icon size=\"large\" name=\"add-circle-outline\"></ion-icon>\n            <h3>KEW.PS 8</h3>\n          </ion-text>\n        </ion-card-content>\n      </ion-card>\n      <hr>\n      <ion-card color=\"primary\" (click)=\"navigateToPage('/core/kewpa9-list')\">\n        <ion-card-content>\n          <ion-text color=\"light\">\n            <ion-icon size=\"large\" name=\"add-circle-outline\"></ion-icon>\n            <h3>KEW.PA 9</h3>\n          </ion-text>\n        </ion-card-content>\n      </ion-card>\n      <hr>\n      <ion-card color=\"primary\" (click)=\"navigateToPage('/core/kewpa10a-list')\">\n        <ion-card-content>\n          <ion-text color=\"light\">\n            <ion-icon size=\"large\" name=\"add-circle-outline\"></ion-icon>\n            <h3>KEW.PA 10 A</h3>\n          </ion-text>\n        </ion-card-content>\n      </ion-card>\n      <hr>\n      <ion-card color=\"primary\" (click)=\"navigateToPage('/core/kewpa10b-list')\">\n        <ion-card-content>\n          <ion-text color=\"light\">\n            <ion-icon size=\"large\" name=\"add-circle-outline\"></ion-icon>\n            <h3>KEW.PA 10 B</h3>\n          </ion-text>\n        </ion-card-content>\n      </ion-card>\n\n      <hr>\n      <ion-card color=\"primary\" (click)=\"scanBarcode()\">\n        <ion-card-content>\n          <ion-text color=\"light\">\n            <ion-icon size=\"large\" name=\"add-circle-outline\"></ion-icon>\n            <h3>SCAN QR TEST</h3>\n          </ion-text>\n        </ion-card-content>\n      </ion-card>\n      <hr>\n    </ion-list>\n  </div>\n\n</ion-content>\n<!--<ion-header mode=\"ios\" class=\"ion-no-border\">\n  <ion-toolbar color=\"light\" mode=\"ios\">\n    <ion-title>Menu Utama</ion-title>\n  </ion-toolbar>\n</ion-header>\n<ion-content>\n\n    <ion-card color=\"light\" href=\"/kewpa8\">\n      <ion-card-content>\n        <ion-row>\n          <ion-col text-left>\n            <ion-label><b>KEW.PA-8</b></ion-label>\n\t\t      </ion-col>\n\n\t\t    </ion-row>\n      </ion-card-content>\n    </ion-card>\n\n    <ion-card color=\"light\" href=\"/kewpa9\">\n      <ion-card-content>\n        <ion-row>\n          <ion-col text-left>\n            <ion-label><b>KEW.PA-9</b></ion-label>\n\t\t      </ion-col>\n\n\t\t    </ion-row>\n      </ion-card-content>\n    </ion-card>\n\n    <ion-card color=\"light\" href=\"/kewpa10a\">\n      <ion-card-content>\n        <ion-row>\n          <ion-col text-left>\n            <ion-label><b>KEW.PA-10 A</b></ion-label>\n\t\t      </ion-col>\n\n\t\t    </ion-row>\n      </ion-card-content>\n    </ion-card>\n\n    <ion-card color=\"light\" href=\"/kewpa10b\">\n      <ion-card-content>\n        <ion-row>\n          <ion-col text-left>\n            <ion-label><b>KEW.PA-10 B</b></ion-label>\n\t\t      </ion-col>\n\n\t\t    </ion-row>\n      </ion-card-content>\n    </ion-card>\n\n\n\n</ion-content>-->\n";
     /***/
   },
 
@@ -215,12 +215,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
     /*! @angular/router */
     "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+    /* harmony import */
+
+
+    var _ionic_native_barcode_scanner_ngx__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! @ionic-native/barcode-scanner/ngx */
+    "./node_modules/@ionic-native/barcode-scanner/__ivy_ngcc__/ngx/index.js");
 
     var DashboardPage = /*#__PURE__*/function () {
-      function DashboardPage(router) {
+      function DashboardPage(router, barcodeScanner) {
         _classCallCheck(this, DashboardPage);
 
         this.router = router;
+        this.barcodeScanner = barcodeScanner;
       }
 
       _createClass(DashboardPage, [{
@@ -231,6 +238,30 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         value: function navigateToPage(path) {
           this.router.navigate([path]);
         }
+      }, {
+        key: "scanBarcode",
+        value: function scanBarcode() {
+          var _this = this;
+
+          var options = {
+            preferFrontCamera: false,
+            showFlipCameraButton: true,
+            showTorchButton: true,
+            torchOn: false,
+            prompt: 'Place a barcode inside the scan area',
+            resultDisplayDuration: 500,
+            formats: 'EAN_13,EAN_8,QR_CODE,PDF_417 ',
+            orientation: 'portrait'
+          };
+          console.log(this.barcodeScanner);
+          this.barcodeScanner.scan(options).then(function (barcodeData) {
+            console.log('Barcode data', barcodeData);
+            _this.scannedData = barcodeData;
+            alert(barcodeData);
+          })["catch"](function (err) {
+            console.log('Error', err);
+          });
+        }
       }]);
 
       return DashboardPage;
@@ -239,6 +270,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     DashboardPage.ctorParameters = function () {
       return [{
         type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]
+      }, {
+        type: _ionic_native_barcode_scanner_ngx__WEBPACK_IMPORTED_MODULE_3__["BarcodeScanner"]
       }];
     };
 

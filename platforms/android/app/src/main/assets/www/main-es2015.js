@@ -631,6 +631,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _shared_handler_jwt_jwt_service__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./shared/handler/jwt/jwt.service */ "./src/app/shared/handler/jwt/jwt.service.ts");
 /* harmony import */ var _ionic_native_native_storage_ngx__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @ionic-native/native-storage/ngx */ "./node_modules/@ionic-native/native-storage/__ivy_ngcc__/ngx/index.js");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
+/* harmony import */ var _ionic_native_barcode_scanner_ngx__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @ionic-native/barcode-scanner/ngx */ "./node_modules/@ionic-native/barcode-scanner/__ivy_ngcc__/ngx/index.js");
+
 
 
 
@@ -663,6 +665,7 @@ AppModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
             _angular_forms__WEBPACK_IMPORTED_MODULE_13__["ReactiveFormsModule"],
         ],
         providers: [
+            _ionic_native_barcode_scanner_ngx__WEBPACK_IMPORTED_MODULE_14__["BarcodeScanner"],
             _shared_handler_jwt_jwt_service__WEBPACK_IMPORTED_MODULE_11__["JwtService"],
             _ionic_native_native_storage_ngx__WEBPACK_IMPORTED_MODULE_12__["NativeStorage"],
             _ionic_native_status_bar_ngx__WEBPACK_IMPORTED_MODULE_6__["StatusBar"],
@@ -738,7 +741,8 @@ __webpack_require__.r(__webpack_exports__);
 // The list of file replacements can be found in `angular.json`.
 const environment = {
     production: false,
-    baseUrl: 'https://labuan-aset.prototype.com.my/'
+    //baseUrl: 'https://labuan-aset.prototype.com.my/'
+    baseUrl: 'http://127.0.0.1:8000/'
 };
 /*
  * For easier debugging in development mode, you can import the following file
