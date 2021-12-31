@@ -16,6 +16,7 @@ import { JwtService } from './shared/handler/jwt/jwt.service';
 import { NativeStorage } from '@ionic-native/native-storage/ngx';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BarcodeScanner } from '@ionic-native/barcode-scanner/ngx';
+import { DatePipe } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { BarcodeScanner } from '@ionic-native/barcode-scanner/ngx';
     NativeStorage,
     StatusBar,
     SplashScreen,
+    DatePipe,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     /*{
       provide: HTTP_INTERCEPTORS, useClass: HttpTokenInterceptor, multi: true

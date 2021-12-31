@@ -1,4 +1,4 @@
-<ion-header class="ion-no-border">
+<!-- <ion-header class="ion-no-border">
   <ion-toolbar color="primary">
     <ion-buttons slot="start">
       <ion-button (click)="navigateToPage('/core/dashboard')">
@@ -6,33 +6,61 @@
       </ion-button>
     </ion-buttons>
 
-    <ion-title mode="ios">KEW.PA 10 A</ion-title>
+    <ion-title mode="ios">KEW.PS 10a</ion-title>
 
     <ion-buttons slot="end">
       <ion-button (click)="logout()">
         <ion-icon slot="icon-only" name="log-out-outline"></ion-icon>
       </ion-button> </ion-buttons> </ion-toolbar>
-</ion-header>
+</ion-header> -->
 
 <ion-content>
-  <div id="container" class="background">
+  <div class="custom-figma-header ion-text-center">
+    <div class="custom-figma-title">
+      BORANG ADUAN KEROSAKAN <br />ASET ALIH<br />
+      KEW.PA-10 A
+    </div>
+  </div>
 
-    <ion-toolbar>
-      <ion-buttons slot="secondary">
-        <ion-button (click)="navigateToPage('/core/kewpa10a-create')">
-          <ion-icon slot="icon-only" name="add"></ion-icon>
-        </ion-button>
-      </ion-buttons>
-      <ion-title>Senarai Borang</ion-title>
-    </ion-toolbar>
+  <br />
+  <div id="container" class="background">
+    <div class="custom-figma-item"></div>
     <ion-list *ngFor="let i of kewpa10a">
-      <ion-item>
-        <ion-label>No Rujukan {{i.id}}</ion-label>
-        <ion-icon class="item-right" (click)="viewKewpa10a(i)" name="eye-outline"></ion-icon>
-        <ion-icon class="item-right" (click)="editKewpa10a(i)" name="create"></ion-icon>
-        <ion-icon class="item-right" (click)="deleteKewpa10a(i)" name="trash-bin-outline"></ion-icon>
+      <ion-item class="item-form">
+        <ion-input
+          (click)="viewKewpa10a(i)"
+          placeholder=""
+          mode="ios"
+          value="No Rujukan {{i.id}}"
+          readonly
+        ></ion-input>
+        <div class="custom-figma-button ion-text-center">
+          <ion-grid>
+            <ion-row>
+              <ion-col size="6" (click)="editKewpa10a(i)">
+                <ion-icon name="create-outline"></ion-icon>
+              </ion-col>
+              <ion-col size="6" (click)="deleteKewpa10a(i)">
+                <ion-icon name="trash-outline"></ion-icon>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </div>
       </ion-item>
     </ion-list>
+
+
+
   </div>
+  <div class="custom-figma-bottom"></div>
+  <div (click)="navigateToPage('/core/kewpa10a-create')" class="custom-figma-left">
+  </div>
+  <ion-icon (click)="navigateToPage('/core/kewpa10a-create')" class="custom-figma-fab-left" name="add-outline"></ion-icon>
+  <div
+    (click)="navigateToPage('/core/dashboard')"
+    class="custom-figma-right"
+  ></div>
+  <ion-icon (click)="navigateToPage('/core/dashboard')" class="custom-figma-fab-right" name="close-outline"></ion-icon>
+
 
 </ion-content>

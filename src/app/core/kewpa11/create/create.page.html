@@ -1,0 +1,180 @@
+<!-- <ion-header class="ion-no-border"> <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-button (click)="navigateToPage('/core/kewpa11-list')">
+        <ion-icon slot="icon-only" name="chevron-back-circle"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-title mode="ios">KEW.PA 11</ion-title>
+
+    <ion-buttons slot="end">
+      <ion-button (click)="logout()">
+        <ion-icon slot="icon-only" name="log-out-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header> -->
+<ion-content class="content">
+  <div class="custom-figma-header ion-text-center">
+    <div class="custom-figma-title">
+      BORANG PEMERIKSAAN <br />ASET ALIH<br />
+      KEW.PA-11
+    </div>
+  </div>
+  <br />
+
+  <div>
+    <form [formGroup]="kewpa11Form">
+      <ion-list class="ion-no-margin list-core" mode="ios">
+        <ion-item class="item-form" lines="none">
+          <ion-label position="stacked" mode="ios">No Rujukan</ion-label>
+          <ion-input
+            placeholder=""
+            mode="ios"
+            value="{{kewpa11.id}}"
+            readonly
+          ></ion-input>
+        </ion-item>
+
+        <ion-item class="item-form" lines="none">
+          <ion-label position="stacked" mode="ios"
+            >Kementerian/Jabatan/PTJ</ion-label
+          >
+          <ion-input
+            placeholder=""
+            mode="ios"
+            value="{{kewpa11.kewpa11.agensi}}"
+            readonly
+          ></ion-input>
+        </ion-item>
+
+        <ion-item class="item-form" lines="none">
+          <ion-label position="stacked" mode="ios">Bahagian</ion-label>
+          <ion-input
+            placeholder=""
+            mode="ios"
+            value="{{kewpa11.kewpa11.bahagian}}"
+            readonly
+          ></ion-input>
+        </ion-item>
+
+        <ion-item class="item-form" lines="none">
+          <ion-label position="stacked" mode="ios"
+            >No Siri Pendaftaran</ion-label
+          >
+          <ion-input
+            placeholder=""
+            mode="ios"
+            value="{{kewpa11.no_siri_pendaftaran}}"
+            readonly
+          ></ion-input>
+        </ion-item>
+
+        <ion-item class="item-form" lines="none">
+          <ion-label position="stacked" mode="ios"
+            >Lokasi Mengikut Rekod</ion-label
+          >
+          <ion-input
+            placeholder=""
+            mode="ios"
+            value="{{kewpa11.kewpa3a.lokasi_penempatan}}"
+            readonly
+          ></ion-input>
+        </ion-item>
+
+        <ion-item class="item-form" lines="none">
+          <ion-label position="stacked" mode="ios">Lokasi Sebenar</ion-label>
+          <ion-input
+            placeholder=""
+            mode="ios"
+            formControlName="lokasi_sebenar"
+          ></ion-input>
+        </ion-item>
+
+        <ion-item class="item-form" lines="none">
+          <ion-label position="stacked" mode="ios">Status Aset</ion-label>
+          <ion-select formControlName="status_aset">
+            <ion-select-option value="Sedang Digunakan(A)"
+              >Sedang Digunakan(A)</ion-select-option
+            >
+            <ion-select-option value="Tidak Digunakan(B)"
+              >Tidak Digunakan(B)</ion-select-option
+            >
+            <ion-select-option value="Perlu Pembaikan(C)"
+              >Perlu Pembaikan(C)</ion-select-option
+            >
+            <ion-select-option value="Sedang Diselenggara(D)"
+              >Sedang Diselenggara(D)</ion-select-option
+            >
+            <ion-select-option value="Hilang(E)">Hilang(E)</ion-select-option>
+          </ion-select>
+        </ion-item>
+
+        <ion-item class="item-form" lines="none">
+          <ion-label position="stacked" mode="ios">Catatan</ion-label>
+          <ion-input
+            placeholder=""
+            mode="ios"
+            value="{{kewpa11.catatan}}"
+            readonly
+          ></ion-input>
+        </ion-item>
+
+        <br />
+        <div padding>
+          <div *ngIf="updateMode === false" class="card" style="padding: 20px">
+            <ion-button
+              color="primary"
+              size="medium"
+              [disabled]="kewpa11Form.invalid"
+              (click)="submitKewpa11()"
+              expand="block"
+            >
+              Simpan</ion-button
+            >
+          </div>
+
+          <div *ngIf="updateMode === true" class="card" style="padding: 20px">
+            <ion-row>
+              <ion-col size="6">
+                <ion-button
+                  color="primary"
+                  size="medium"
+                  [disabled]="kewpa11Form.invalid"
+                  (click)="submitKewpa11Update()"
+                  expand="block"
+                >
+                  Simpan</ion-button
+                >
+              </ion-col>
+              <ion-col size="6">
+                <ion-button
+                  color="primary"
+                  size="medium"
+                  [disabled]="kewpa11Form.invalid"
+                  (click)="submitKewpa11UpdateSubmit()"
+                  expand="block"
+                >
+                  Simpan & Hantar</ion-button
+                >
+              </ion-col>
+            </ion-row>
+            <br />
+          </div>
+        </div>
+      </ion-list>
+    </form>
+  </div>
+  <br>
+  <br>
+  <br>
+  <div
+    (click)="navigateToPage('/core/kewpa11-list')"
+    class="custom-figma-right"
+  ></div>
+  <ion-icon
+    (click)="navigateToPage('/core/kewpa11-list')"
+    class="custom-figma-fab-right"
+    name="close-outline"
+  ></ion-icon>
+</ion-content>

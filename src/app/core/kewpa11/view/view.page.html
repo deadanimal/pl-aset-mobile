@@ -1,0 +1,122 @@
+<ion-content>
+  <div class="custom-figma-header ion-text-center">
+    <div class="custom-figma-title">
+      BORANG PEMERIKSAAN <br />ASET ALIH<br />
+      KEW.PA-11
+    </div>
+  </div>
+  <br />
+
+
+  <div>
+    <form>
+      <ion-list class="ion-no-margin list-core" mode="ios">
+        <ion-item class="item-form" lines="none">
+          <ion-label position="stacked" mode="ios">No Rujukan</ion-label>
+          <ion-input
+            placeholder=""
+            mode="ios"
+            value="{{kewpa11.id}}"
+            readonly
+          ></ion-input>
+        </ion-item>
+
+        <ion-item class="item-form" lines="none">
+          <ion-label position="stacked" mode="ios"
+            >Kementerian/Jabatan/PTJ</ion-label
+          >
+          <ion-input
+            placeholder=""
+            mode="ios"
+            value="{{kewpa11.kewpa11.agensi}}"
+            readonly
+          ></ion-input>
+        </ion-item>
+
+        <ion-item class="item-form" lines="none">
+          <ion-label position="stacked" mode="ios">Bahagian</ion-label>
+          <ion-input
+            placeholder=""
+            mode="ios"
+            value="{{kewpa11.kewpa11.bahagian}}"
+            readonly
+          ></ion-input>
+        </ion-item>
+
+        <ion-item class="item-form" lines="none">
+          <ion-label position="stacked" mode="ios"
+            >No Siri Pendaftaran</ion-label
+          >
+          <ion-input
+            placeholder=""
+            mode="ios"
+            value="{{kewpa11.no_siri_pendaftaran}}"
+            readonly
+          ></ion-input>
+        </ion-item>
+
+        <ion-item class="item-form" lines="none">
+          <ion-label position="stacked" mode="ios"
+            >Lokasi Mengikut Rekod</ion-label
+          >
+          <ion-input
+            placeholder=""
+            mode="ios"
+            value="{{kewpa11.kewpa3a.lokasi_penempatan}}"
+            readonly
+          ></ion-input>
+        </ion-item>
+
+        <ion-item class="item-form" lines="none">
+          <ion-label position="stacked" mode="ios">Lokasi Sebenar</ion-label>
+          <ion-input
+            placeholder=""
+            mode="ios"
+            value="{{kewpa11.lokasi_sebenar}}"
+            readonly
+          ></ion-input>
+        </ion-item>
+
+        <ion-item class="item-form" lines="none">
+          <ion-label position="stacked" mode="ios">Lokasi Sebenar</ion-label>
+          <ion-input
+            placeholder=""
+            value="{{kewpa11.status_aset}}"
+            readonly
+          ></ion-input>
+        </ion-item>
+
+        <ion-item class="item-form" lines="none">
+          <ion-label position="stacked" mode="ios">Catatan</ion-label>
+          <ion-input
+            placeholder=""
+            mode="ios"
+            value="{{kewpa11.catatan}}"
+            readonly
+          ></ion-input>
+        </ion-item>
+
+        <div  padding> 
+          <div style="padding: 20px; width: 60%; margin-left: 20%;">
+            <ion-button
+              *ngIf="kewpa11.scan_status == 'scanned'"
+            
+              color="primary"
+              size="medium"
+              (click)="editKewpa11()"
+              expand="block"
+            >
+              Kemaskini</ion-button
+            >
+          </div>
+        </div>
+      </ion-list>
+    </form>
+  </div>
+  <div
+    (click)="navigateToPage('/core/dashboard')"
+    class="custom-figma-right"
+  ></div>
+  <ion-icon (click)="navigateToPage('/core/kewpa11-list')" class="custom-figma-fab-right" name="close-outline"></ion-icon>
+
+</ion-content>

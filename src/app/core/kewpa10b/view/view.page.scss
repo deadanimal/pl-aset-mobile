@@ -1,6 +1,6 @@
 ion-item {
   border-radius: 18px;
-  margin-bottom: .7rem;
+  margin-bottom: 0.7rem;
 }
 
 ion-toolbar {
@@ -17,7 +17,7 @@ ion-toolbar {
   border-top-left-radius: 2.5rem;
   border-top-right-radius: 2.5rem;
 
-  img{
+  img {
     border-radius: 18px;
   }
 }
@@ -49,8 +49,110 @@ ion-content {
   margin-left: 20px;
 }
 
-
-ion-input, ion-datetime {
+ion-input,
+ion-datetime {
   font-size: 12px;
+}
 
+//figma styling starts here
+ion-icon {
+  font-size: 30px; //Preferred size here
+  color: rgba(217, 149, 88);
+}
+
+ion-col {
+  margin: 0px !important;
+  padding: 0px !important;
+}
+.h-200 {
+  height: 200px;
+}
+
+.custom-figma-header {
+  width: 100%;
+  height: 150px;
+  left: 0px;
+  top: 50px;
+  background: #141e56;
+  border-bottom-left-radius: 31px;
+  border-bottom-right-radius: 31px;
+}
+
+.custom-figma-title {
+  padding-top: 30px;
+  align-items: center;
+  text-align: center;
+  letter-spacing: -0.015em;
+  color: #ffffff;
+  font-weight: normal;
+  font-size: 25px;
+}
+
+.custom-figma-bottom {
+  position: fixed;
+  left: 32%;
+  right: 32%;
+  top: 98.4%;
+  bottom: 0.99%;
+
+  background: #000000;
+  border-radius: 10px;
+}
+
+.custom-figma-left {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  left: 8%;
+  top: 90%;
+  border-radius: 10px;
+  background: #172761;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  transform: rotate(-40deg);
+}
+
+.custom-figma-right {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  left: 80%;
+  top: 90%;
+  border-radius: 10px;
+  background: #172761;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  transform: rotate(-40deg);
+}
+
+.custom-figma-button {
+  background: #141e56;
+  border: 1px solid rgba(255, 253, 253, 0.1);
+  backdrop-filter: blur(4px);
+  /* Note: backdrop-filter has minimal browser support */
+
+  border-radius: 5px;
+  width: 81px;
+  height: 45px;
+}
+
+.custom-figma-fab-left {
+  position: fixed;
+  width: 25px;
+  height: 25px;
+  left: 11%;
+  top: 91.5%;
+  color: #ffffff;
+}
+
+.custom-figma-fab-right {
+  position: fixed;
+  width: 25px;
+  height: 25px;
+  left: 83%;
+  top: 91.5%;
+  color: #ffffff;
+}
+
+ion-item, ion-input {
+  padding: 0px !important;
+  margin: 0px !important;
 }

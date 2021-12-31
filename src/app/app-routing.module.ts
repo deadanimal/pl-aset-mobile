@@ -10,14 +10,14 @@ const routes: Routes = [
   { path: 'auth/login',
     loadChildren: () => import('./auth/login/login.module').then( m => m.LoginPageModule)
   },
-  {
-    path: 'auth/register',
-    loadChildren: () => import('./auth/register/register.module').then( m => m.RegisterPageModule)
-  },
-  {
-    path: 'auth/forgot',
-    loadChildren: () => import('./auth/forgot/forgot.module').then( m => m.ForgotPageModule)
-  },
+  // {
+  //   path: 'auth/register',
+  //   loadChildren: () => import('./auth/register/register.module').then( m => m.RegisterPageModule)
+  // },
+  // {
+  //   path: 'auth/forgot',
+  //   loadChildren: () => import('./auth/forgot/forgot.module').then( m => m.ForgotPageModule)
+  // },
   {
     path: 'auth',
     loadChildren: () => import('./layouts/auth-layout/auth-layout.module').then( m => m.AuthLayoutPageModule)
@@ -69,6 +69,46 @@ const routes: Routes = [
   {
     path: 'create',
     loadChildren: () => import('./core/kewpa10b/create/create.module').then( m => m.CreatePageModule)
+  },
+  {
+    path: 'list',
+    loadChildren: () => import('./core/kewpa11/list/list.module').then( m => m.ListPageModule)
+  },
+  {
+    path: 'view',
+    loadChildren: () => import('./core/kewpa11/view/view.module').then( m => m.ViewPageModule)
+  },
+  {
+    path: 'create',
+    loadChildren: () => import('./core/kewpa11/create/create.module').then( m => m.CreatePageModule)
+  },
+  {
+    path: 'list',
+    loadChildren: () => import('./core/kewpa21/list/list.module').then( m => m.ListPageModule)
+  },
+  {
+    path: 'create',
+    loadChildren: () => import('./core/kewpa21/create/create.module').then( m => m.CreatePageModule)
+  },
+  {
+    path: 'view',
+    loadChildren: () => import('./core/kewpa21/view/view.module').then( m => m.ViewPageModule)
+  },
+  {
+    path: 'pengumuman',
+    loadChildren: () => import('./core/pengumuman/pengumuman.module').then( m => m.PengumumanPageModule)
+  },
+  {
+    path: 'landing',
+    loadChildren: () => import('./core/landing/landing.module').then( m => m.LandingPageModule)
+  },
+  {
+    path: 'homepage',
+    loadChildren: () => import('./core/homepage/homepage.module').then( m => m.HomepagePageModule)
+  },
+  {
+    path: 'profil',
+    loadChildren: () => import('./core/profil/profil.module').then( m => m.ProfilPageModule)
   },
 
 

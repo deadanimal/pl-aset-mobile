@@ -1,0 +1,63 @@
+
+      <ion-content class="content">
+        <div class="custom-figma-header ion-text-center">
+    <div class="custom-figma-title">
+      BORANG PELUPUSAN <br />ASET ALIH<br />
+      KE.WPA-21
+    </div>
+  </div>
+
+  <br />
+
+        <div>
+          <form>
+            <ion-list class="ion-no-margin list-core" mode="ios">
+              <ion-item class="item-form" lines="none">
+			    	    <ion-label position="stacked" mode="ios">No Siri Pendaftaran</ion-label>
+                <ion-input placeholder="" mode="ios" value="{{kewpa21.no_siri_pendaftaran}}" readonly></ion-input>
+			        </ion-item>
+              <ion-item class="item-form" lines="none">
+			    	    <ion-label position="stacked" mode="ios">Kaedah Aset</ion-label>
+                <ion-input placeholder="" mode="ios" value="{{kewpa21.keadaan_aset}}" readonly></ion-input>
+			        </ion-item>
+              <ion-item class="item-form" lines="none">
+			    	    <ion-label position="stacked" mode="ios">Syor Kaedah Pelupusan</ion-label>
+                <ion-input placeholder="" mode="ios" value="{{kewpa21.kaedah_pelupusan}}" readonly></ion-input>
+			        </ion-item>
+
+              <ion-item class="item-form" lines="none">
+			    	    <ion-label position="stacked" mode="ios">Justifikasi</ion-label>
+                <ion-input placeholder="" mode="ios" value="{{kewpa21.justifikasi}}" readonly></ion-input>
+			        </ion-item>
+
+              <ion-item class="item-form" lines="none">
+			    	    <ion-label position="stacked" mode="ios">Catatan</ion-label>
+                <ion-input placeholder="" mode="ios" value="{{kewpa21.catatan}}" readonly></ion-input>
+			        </ion-item>
+              <br>
+               <div  padding> 
+          <div style="padding: 20px; width: 60%; margin-left: 20%;">
+            <ion-button
+            
+              *ngIf="kewpa21.scan_status == 'scanned'"
+              color="primary"
+              size="medium"
+              (click)="editKewpa21()"
+              expand="block"
+            >
+              Kemaskini</ion-button
+            >
+          </div>
+        </div>
+
+            </ion-list>
+          </form>
+        </div>
+  <div
+    (click)="navigateToPage('/core/dashboard')"
+    class="custom-figma-right"
+  ></div>
+  <ion-icon (click)="navigateToPage('/core/kewpa21-list')" class="custom-figma-fab-right" name="close-outline"></ion-icon>
+
+
+      </ion-content>

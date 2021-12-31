@@ -1,0 +1,92 @@
+      <ion-content class="content">
+      <div class="custom-figma-header ion-text-center">
+    <div class="custom-figma-title">
+      BORANG PELUPUSAN <br />ASET ALIH<br />
+      KE.WPA-21
+    </div>
+  </div>
+
+  <br />
+
+        <div >
+          <form [formGroup]="kewpa21Form">
+            <ion-list class="ion-no-margin list-core" mode="ios">
+              <ion-item class="item-form" lines="none">
+			    	    <ion-label position="stacked" mode="ios">No Siri Pendaftaran</ion-label>
+                <ion-input placeholder="" mode="ios" value="{{kewpa21.no_siri_pendaftaran}}" readonly></ion-input>
+			        </ion-item>
+              <ion-item class="item-form" lines="none">
+			    	    <ion-label position="stacked" mode="ios">Kaedah Aset</ion-label>
+                <ion-input placeholder="" mode="ios" value="{{kewpa21.keadaan_aset}}" readonly></ion-input>
+			        </ion-item>
+              <ion-item class="item-form" lines="none">
+			    	    <ion-label position="stacked" mode="ios">Syor Kaedah Pelupusan</ion-label>
+                <ion-input placeholder="" mode="ios" value="{{kewpa21.kaedah_pelupusan}}" formControlName="kaedah_pelupusan"></ion-input>
+			        </ion-item>
+
+              <ion-item class="item-form" lines="none">
+			    	    <ion-label position="stacked" mode="ios">Justifikasi</ion-label>
+                <ion-input placeholder="" mode="ios" value="{{kewpa21.justifikasi}}" formControlName="justifikasi"></ion-input>
+			        </ion-item>
+
+              <ion-item class="item-form" lines="none">
+			    	    <ion-label position="stacked" mode="ios">Catatan</ion-label>
+                <ion-input placeholder="" mode="ios" value="{{kewpa21.catatan}}" readonly></ion-input>
+			        </ion-item>
+
+               <br>
+               <div padding>
+          <div *ngIf="updateMode === false" class="card" style="padding: 20px">
+            <ion-button
+              color="primary"
+              size="medium"
+              [disabled]="kewpa21Form.invalid"
+              (click)="submitKewpa21()"
+              expand="block"
+            >
+              Simpan</ion-button
+            >
+          </div>
+
+          <div *ngIf="updateMode === true" class="card" style="padding: 20px">
+            <ion-row>
+              <ion-col size="6">
+                <ion-button
+                  color="primary"
+                  size="medium"
+                  [disabled]="kewpa21Form.invalid"
+                  (click)="submitKewpa21Update()"
+                  expand="block"
+                >
+                  Simpan</ion-button
+                >
+              </ion-col>
+              <ion-col size="6">
+                <ion-button
+                  color="primary"
+                  size="medium"
+                  [disabled]="kewpa21Form.invalid"
+                  (click)="submitKewpa21UpdateSubmit()"
+                  expand="block"
+                >
+                  Simpan & Hantar</ion-button
+                >
+              </ion-col>
+            </ion-row>
+            <br />
+          </div>
+        </div>
+            </ion-list>
+          </form>
+        </div>
+<div
+    (click)="navigateToPage('/core/kewpa21-list')"
+    class="custom-figma-right"
+  ></div>
+  <ion-icon
+    (click)="navigateToPage('/core/kewpa21-list')"
+    class="custom-figma-fab-right"
+    name="close-outline"
+  ></ion-icon>
+
+      </ion-content>

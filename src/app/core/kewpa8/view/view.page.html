@@ -1,48 +1,50 @@
-<ion-header class="ion-no-border">
-  <ion-toolbar color="primary">
-    <ion-buttons slot="start">
-      <ion-button (click)="dismissModal()">
-        <ion-icon slot="icon-only" name="chevron-back-circle"></ion-icon>
-      </ion-button>
-    </ion-buttons>
-
-    <ion-title mode="ios">KEW.PS 8 No.{{kewpa8.id}}</ion-title>
-
-    <ion-buttons slot="end">
-      <ion-button (click)="logout()">
-        <ion-icon slot="icon-only" name="log-out-outline"></ion-icon>
-      </ion-button> 
-    </ion-buttons> 
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-content>
-    <div class="card-body">
-      <ion-content class="content">
-        <br>
-        <br>
-        <div class="item-start">
-          <ion-badge color="primary" style="border-radius: 18px; padding: 4px;"> KEWPA 8 </ion-badge>
-        </div>
-
-        <div >
-          <form>
-            <ion-list class="ion-no-margin list-core" mode="ios">
-              <ion-item class="item-form" lines="none">
-			    	    <ion-label position="stacked" mode="ios">Kuantiti Dimohon</ion-label>
-                <ion-input value="{{kewpa8.kuantiti_dimohon}}" mode="ios" readonly></ion-input>
-			        </ion-item>
-              <ion-item class="item-form" lines="none">
-			    	    <ion-label position="stacked" mode="ios">Catatan Pemohon</ion-label>
-                <ion-input value="{{kewpa8.catatan_pemohon}}" mode="ios" readonly></ion-input>
-			        </ion-item>
-               
-            </ion-list>
-          </form>
-        </div>
-      </ion-content>
+<ion-content class="content">
+  <div class="custom-figma-header ion-text-center">
+    <div class="custom-figma-title">
+      BORANG PERMOHONAN STOK <br />STOR<br />
+      KEW.PS-8
     </div>
+  </div>
+  <br />
+  <div>
+    <form>
+      <ion-list class="ion-no-margin list-core" mode="ios">
+        <ion-item class="item-form" lines="none">
+          <ion-label position="stacked" mode="ios">Kuantiti Dimohon</ion-label>
+          <ion-input
+            value="{{kewpa8.kuantiti_dimohon}}"
+            mode="ios"
+            readonly
+          ></ion-input>
+        </ion-item>
+        <ion-item class="item-form" lines="none">
+          <ion-label position="stacked" mode="ios">Catatan Pemohon</ion-label>
+          <ion-input
+            value="{{kewpa8.catatan_pemohon}}"
+            mode="ios"
+            readonly
+          ></ion-input>
+        </ion-item>
+        <div  padding> 
+          <div style="padding: 20px; width: 60%; margin-left: 20%;">
+            <ion-button
+            
+              color="primary"
+              size="medium"
+              (click)="editKewpa8()"
+              expand="block"
+            >
+              Kemaskini</ion-button
+            >
+          </div>
+        </div>
+      </ion-list>
+    </form>
+  </div>
+  <div
+  (click)="dismissModal()"
+  class="custom-figma-right"
+></div>
+<ion-icon (click)="dismissModal()" class="custom-figma-fab-right" name="close-outline"></ion-icon>
 
-  </ion-content>
 </ion-content>

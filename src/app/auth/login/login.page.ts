@@ -14,7 +14,7 @@ export class LoginPage implements OnInit {
   // Form
   loginForm: FormGroup;
   loginFormMessages = {
-    'username': [
+    'email': [
       { type: 'required', message: 'Email is required.' },
       { type: 'pattern', message: 'Please enter a valid email.' }
     ],
@@ -39,7 +39,7 @@ export class LoginPage implements OnInit {
 
   ngOnInit() {
     this.loginForm = this.formBuilder.group({
-      username: new FormControl('', Validators.compose([
+      email: new FormControl('', Validators.compose([
         Validators.required,
         Validators.pattern('^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$')
       ])),
@@ -56,28 +56,22 @@ export class LoginPage implements OnInit {
 
   login() {
     this.isLoading = true
-    console.log(this.loginForm.value)
-    //this.authService.obtainToken(this.loginForm.value).subscribe(
-    //  () => {
-    //    // Success
-    //    this.isLoading = false
-    //  },
-    //  () => {
-    //    // Failed
-    //    this.isLoading = false
-    //  },
-    //  () => {
-    //    // After
-    //    this.toastr.openToastr('Welcome back')
-    //    this.navigateHomePage()
-    //  }
-    //)
-    this.navigateHomePage()
-
+    this.authService.obtainToken(this.loginForm.value).subscribe(
+      (res) => {
+        this.isLoading = false
+        this.navigateHomePage()
+      },
+      (err) => {
+        this.toastr.openToastr(err.error.message);
+        this.isLoading = false
+      },
+      () => {
+      }
+    )
   }
 
   navigateHomePage() {
-    this.router.navigate(['/core/dashboard'], {
+    this.router.navigate(['/core/homepage'], {
       replaceUrl: true
     })
   }

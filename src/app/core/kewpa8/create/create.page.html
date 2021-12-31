@@ -1,4 +1,4 @@
-<ion-header class="ion-no-border">
+<!-- <ion-header class="ion-no-border">
   <ion-toolbar color="primary">
     <ion-buttons slot="start">
       <ion-button (click)="navigateToPage('/core/kewpa8-list')">
@@ -14,50 +14,74 @@
       </ion-button>
     </ion-buttons>
   </ion-toolbar>
-</ion-header>
-<ion-content [fullscreen]="true">
-  <ion-content>
-    <div class="card-body">
-      <ion-content class="content">
-        <br>
-        <br>
-        <div class="item-start">
-          <ion-badge color="primary" style="border-radius: 18px; padding: 4px;"> KEWPS 8 </ion-badge>
-        </div>
+</ion-header> -->
 
-        <div >
-          <form [formGroup]="kewpa8Form">
-            <ion-list class="ion-no-margin list-core" mode="ios">
-              <ion-item class="item-form" lines="none">
-                <ion-label position="stacked" mode="ios">Kuantiti Dimohon</ion-label>
-			    	    <ion-input placeholder="" mode="ios" formControlName="kuantiti_dimohon"></ion-input>
-			        </ion-item>
-              <ion-item class="item-form" lines="none">
-			    	    <ion-label position="stacked" mode="ios">Catatan Pemohon</ion-label>
-			    	    <ion-input placeholder="" mode="ios" formControlName="catatan_pemohon"></ion-input>
-			        </ion-item>
-
-               
-               <br>
-               <div padding>
-                 <div *ngIf="updateMode === false" class="card" style="padding: 20px;">
-                  <ion-button color="primary" size="medium" [disabled]="kewpa8Form.invalid" (click)="submitKewpa8()"
-                    expand="block">
-                    Simpan</ion-button>
-                 </div>
-
-                 <div *ngIf="updateMode === true" class="card" style="padding: 20px;">
-                  <ion-button color="primary" size="medium" [disabled]="kewpa8Form.invalid" (click)="submitKewpa8Update()"
-                    expand="block">
-                    Simpan</ion-button>
-                 </div>
-
-               </div>
-            </ion-list>
-          </form>
-        </div>
-      </ion-content>
+<ion-content class="content">
+  <div class="custom-figma-header ion-text-center">
+    <div class="custom-figma-title">
+      BORANG PERMOHONAN STOK <br />STOR<br />
+      KEW.PS-8
     </div>
+  </div>
+  <br />
 
-  </ion-content>
+  <div>
+    <form [formGroup]="kewpa8Form">
+      <ion-list class="ion-no-margin list-core" mode="ios">
+        <ion-item class="item-form" lines="none">
+          <ion-label position="stacked" mode="ios">Kuantiti Dimohon</ion-label>
+          <ion-input
+            placeholder=""
+            mode="ios"
+            formControlName="kuantiti_dimohon"
+          ></ion-input>
+        </ion-item>
+        <ion-item class="item-form" lines="none">
+          <ion-label position="stacked" mode="ios">Catatan Pemohon</ion-label>
+          <ion-input
+            placeholder=""
+            mode="ios"
+            formControlName="catatan_pemohon"
+          ></ion-input>
+        </ion-item>
+
+        <br />
+        <div padding>
+          <div *ngIf="updateMode === false" class="card" style="padding: 20px; width: 60%; margin-left: 20%;">
+            <ion-button
+              color="primary"
+              size="medium"
+              [disabled]="kewpa8Form.invalid"
+              (click)="submitKewpa8()"
+              expand="block"
+            >
+              Simpan</ion-button
+            >
+            
+          </div>
+
+          <div *ngIf="updateMode === true" class="card" style="padding: 20px; width: 60%; margin-left: 20%;" >
+            <ion-button
+              color="primary"
+              size="medium"
+              [disabled]="kewpa8Form.invalid"
+              (click)="submitKewpa8Update()"
+              expand="block"
+            >
+              Simpan</ion-button
+            >
+          </div>
+        </div>
+      </ion-list>
+    </form>
+  </div>
+  <div
+    (click)="navigateToPage('/core/kewpa8-list')"
+    class="custom-figma-right"
+  ></div>
+  <ion-icon
+    (click)="navigateToPage('/core/kewpa8-list')"
+    class="custom-figma-fab-right"
+    name="close-outline"
+  ></ion-icon>
 </ion-content>

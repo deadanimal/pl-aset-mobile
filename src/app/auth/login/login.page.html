@@ -15,14 +15,14 @@
 						<p class="ion-text-center ion-padding-bottom">Sistem Pengurusan Aset & Stor</p>
 						<ion-item lines="none" class="ion-no-padding ion-no-margin">
 							<ion-label position="stacked">Your email</ion-label>
-							<ion-input type="text" formControlName="username" placeholder="Your Email"></ion-input>
+							<ion-input type="text" formControlName="email" placeholder="Your Email"></ion-input>
 						</ion-item>
 	
 						<div class="validation-errors">
-							<ng-container *ngFor="let message of loginFormMessages.username">
+							<ng-container *ngFor="let message of loginFormMessages.email">
 								<div 
 									class="error-message"
-									*ngIf="loginForm.get('username').hasError(message.type) && (loginForm.get('username').dirty || loginForm.get('username').touched)"
+									*ngIf="loginForm.get('email').hasError(message.type) && (loginForm.get('email').dirty || loginForm.get('email').touched)"
 								>
 									{{ message.message }}
 								</div>
@@ -48,6 +48,15 @@
 								mode="ios"
 							>
 								Login
+							</ion-button>
+							<ion-button 
+								*ngIf="!isLoading"
+								type="submit"
+								shape="round"
+								color="primary"
+								mode="ios"
+							>
+								Fast Login
 							</ion-button>
 							<ion-button 
 								disabled 

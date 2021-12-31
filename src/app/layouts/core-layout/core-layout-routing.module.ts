@@ -29,6 +29,26 @@ const routes: Routes = [
         ]
       },
       {
+        path: 'kewpa21-view/:kewpa21_id',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('../../core/kewpa21/view/view.module').then(m => m.ViewPageModule)
+          }
+        ]
+      },
+      {
+        path: 'kewpa11-view/:kewpa11_id',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('../../core/kewpa11/view/view.module').then(m => m.ViewPageModule)
+          }
+        ]
+      },
+      {
         path: 'kewpa8-list',
         children: [
           {
@@ -78,6 +98,27 @@ const routes: Routes = [
           }
         ]
       },
+      {
+        path: 'kewpa11-list',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('../../core/kewpa11/list/list.module').then(m => m.ListPageModule)
+          }
+        ]
+      },
+
+      {
+        path: 'kewpa21-list',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('../../core/kewpa21/list/list.module').then(m => m.ListPageModule)
+          }
+        ]
+      },
 
       {
         path: 'kewpa9-create',
@@ -109,6 +150,28 @@ const routes: Routes = [
           }
         ]
       },
+      {
+        path: 'kewpa11-create',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('../../core/kewpa11/create/create.module').then(m => m.CreatePageModule)
+          }
+        ]
+      },
+      {
+        path: 'kewpa21-create',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('../../core/kewpa21/create/create.module').then(m => m.CreatePageModule)
+          }
+        ]
+      },
+
+
       {
         path: 'kewpa8-edit/:kewpa8_id',
         children: [
@@ -151,17 +214,69 @@ const routes: Routes = [
           }
         ]
       },
+      {
+        path: 'kewpa11-edit/:kewpa11_id',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('../../core/kewpa11/create/create.module').then(m => m.CreatePageModule)
+          }
+        ]
+      },
+      {
+        path: 'kewpa21-edit/:kewpa21_id',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('../../core/kewpa21/create/create.module').then(m => m.CreatePageModule)
+          }
+        ]
+      },
+
+      // utils route
+      {
+        path: 'pengumuman',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('../../core/pengumuman/pengumuman.module').then(m => m.PengumumanPageModule)
+          }
+        ]
+      },
 
       {
+        path: 'homepage',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('../../core/homepage/homepage.module').then(m => m.HomepagePageModule)
+          }
+        ]
+      },
+      {
+        path: 'profil',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('../../core/profil/profil.module').then(m => m.ProfilPageModule)
+          }
+        ]
+      },
+      {
         path: '',
-        redirectTo: '/core/dashboard',
+        redirectTo: '/core/homepage',
         pathMatch: 'full'
       }
     ]
   },
   {
     path: '',
-    redirectTo: '/core/dashboard',
+    redirectTo: '/core/homepage',
     pathMatch: 'full'
   }
 ];

@@ -1,29 +1,11 @@
-<ion-header class="ion-no-border">
-  <ion-toolbar color="primary">
-    <ion-buttons slot="start">
-      <ion-button (click)="navigateToPage('/core/kewpa10a-list')">
-        <ion-icon slot="icon-only" name="chevron-back-circle"></ion-icon>
-      </ion-button>
-    </ion-buttons>
-
-    <ion-title mode="ios">KEW.PA 10 A</ion-title>
-
-    <ion-buttons slot="end">
-      <ion-button (click)="logout()">
-        <ion-icon slot="icon-only" name="log-out-outline"></ion-icon>
-      </ion-button>
-    </ion-buttons>
-  </ion-toolbar>
-</ion-header>
-<ion-content [fullscreen]="true">
-  <ion-content>
-    <div class="card-body">
       <ion-content class="content">
-        <br>
-        <br>
-        <div class="item-start">
-          <ion-badge color="primary" style="border-radius: 110apx; padding: 4px;"> KEWPA 10a </ion-badge>
-        </div>
+        <div class="custom-figma-header ion-text-center">
+    <div class="custom-figma-title">
+      BORANG ADUAN KEROSAKAN <br />ASET ALIH<br />
+      KEW.PA-10 A
+    </div>
+  </div>
+  <br />
 
         <div >
           <form [formGroup]="kewpa10aForm">
@@ -73,13 +55,13 @@
                
                <br>
                <div padding>
-                 <div *ngIf="updateMode === false" class="card" style="padding: 20px;">
+                 <div *ngIf="updateMode === false" class="card" style="padding: 20px; width: 60%; margin-left: 20%;">
                   <ion-button color="primary" size="medium" [disabled]="kewpa10aForm.invalid" (click)="submitKewpa10a()"
                     expand="block">
                     Simpan</ion-button>
                  </div>
 
-                 <div *ngIf="updateMode === true" class="card" style="padding: 20px;">
+                 <div *ngIf="updateMode === true" class="card" style="padding: 20px; width: 60%; margin-left: 20%;">
                   <ion-button color="primary" size="medium" [disabled]="kewpa10aForm.invalid" (click)="submitKewpa10aUpdate()"
                     expand="block">
                     Simpan</ion-button>
@@ -90,8 +72,14 @@
             </ion-list>
           </form>
         </div>
-      </ion-content>
-    </div>
+  <div
+    (click)="navigateToPage('/core/kewpa10a-list')"
+    class="custom-figma-right"
+  ></div>
+  <ion-icon
+    (click)="navigateToPage('/core/kewpa10a-list')"
+    class="custom-figma-fab-right"
+    name="close-outline"
+  ></ion-icon>
 
-  </ion-content>
-</ion-content>
+      </ion-content>

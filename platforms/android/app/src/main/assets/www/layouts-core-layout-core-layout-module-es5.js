@@ -21,7 +21,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<ion-tabs>\n  <ion-tab-bar color=\"primary\" slot=\"bottom\">\n    <ion-tab-button tab=\"dashboard\">\n      <ion-icon name=\"grid-outline\"></ion-icon>\n      <ion-label></ion-label>\n    </ion-tab-button>\n\n    <ion-tab-button tab=\"profile\">\n      <ion-icon name=\"person-circle-outline\"></ion-icon>\n      <ion-label></ion-label>\n    </ion-tab-button>\n  </ion-tab-bar>\n\n</ion-tabs>\n";
+    __webpack_exports__["default"] = "<ion-tabs>\n\n</ion-tabs>\n";
     /***/
   },
 
@@ -101,13 +101,41 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           }
         }]
       }, {
+        path: 'kewpa21-view/:kewpa21_id',
+        children: [{
+          path: '',
+          loadChildren: function loadChildren() {
+            return Promise.all(
+            /*! import() | core-kewpa21-view-view-module */
+            [__webpack_require__.e("common"), __webpack_require__.e("core-kewpa21-view-view-module")]).then(__webpack_require__.bind(null,
+            /*! ../../core/kewpa21/view/view.module */
+            "./src/app/core/kewpa21/view/view.module.ts")).then(function (m) {
+              return m.ViewPageModule;
+            });
+          }
+        }]
+      }, {
+        path: 'kewpa11-view/:kewpa11_id',
+        children: [{
+          path: '',
+          loadChildren: function loadChildren() {
+            return Promise.all(
+            /*! import() | core-kewpa11-view-view-module */
+            [__webpack_require__.e("common"), __webpack_require__.e("core-kewpa11-view-view-module")]).then(__webpack_require__.bind(null,
+            /*! ../../core/kewpa11/view/view.module */
+            "./src/app/core/kewpa11/view/view.module.ts")).then(function (m) {
+              return m.ViewPageModule;
+            });
+          }
+        }]
+      }, {
         path: 'kewpa8-list',
         children: [{
           path: '',
           loadChildren: function loadChildren() {
             return Promise.all(
             /*! import() | core-kewpa8-list-list-module */
-            [__webpack_require__.e("common"), __webpack_require__.e("core-kewpa8-list-list-module")]).then(__webpack_require__.bind(null,
+            [__webpack_require__.e("default~core-kewpa8-list-list-module~core-kewpa8-view-view-module"), __webpack_require__.e("common"), __webpack_require__.e("core-kewpa8-list-list-module")]).then(__webpack_require__.bind(null,
             /*! ../../core/kewpa8/list/list.module */
             "./src/app/core/kewpa8/list/list.module.ts")).then(function (m) {
               return m.ListPageModule;
@@ -149,7 +177,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           loadChildren: function loadChildren() {
             return Promise.all(
             /*! import() | core-kewpa10a-list-list-module */
-            [__webpack_require__.e("common"), __webpack_require__.e("core-kewpa10a-list-list-module")]).then(__webpack_require__.bind(null,
+            [__webpack_require__.e("default~core-kewpa10a-list-list-module~core-kewpa10a-view-view-module"), __webpack_require__.e("common"), __webpack_require__.e("core-kewpa10a-list-list-module")]).then(__webpack_require__.bind(null,
             /*! ../../core/kewpa10a/list/list.module */
             "./src/app/core/kewpa10a/list/list.module.ts")).then(function (m) {
               return m.ListPageModule;
@@ -163,9 +191,37 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           loadChildren: function loadChildren() {
             return Promise.all(
             /*! import() | core-kewpa10b-list-list-module */
-            [__webpack_require__.e("common"), __webpack_require__.e("core-kewpa10b-list-list-module")]).then(__webpack_require__.bind(null,
+            [__webpack_require__.e("default~core-kewpa10b-list-list-module~core-kewpa10b-view-view-module"), __webpack_require__.e("common"), __webpack_require__.e("core-kewpa10b-list-list-module")]).then(__webpack_require__.bind(null,
             /*! ../../core/kewpa10b/list/list.module */
             "./src/app/core/kewpa10b/list/list.module.ts")).then(function (m) {
+              return m.ListPageModule;
+            });
+          }
+        }]
+      }, {
+        path: 'kewpa11-list',
+        children: [{
+          path: '',
+          loadChildren: function loadChildren() {
+            return Promise.all(
+            /*! import() | core-kewpa11-list-list-module */
+            [__webpack_require__.e("common"), __webpack_require__.e("core-kewpa11-list-list-module")]).then(__webpack_require__.bind(null,
+            /*! ../../core/kewpa11/list/list.module */
+            "./src/app/core/kewpa11/list/list.module.ts")).then(function (m) {
+              return m.ListPageModule;
+            });
+          }
+        }]
+      }, {
+        path: 'kewpa21-list',
+        children: [{
+          path: '',
+          loadChildren: function loadChildren() {
+            return Promise.all(
+            /*! import() | core-kewpa21-list-list-module */
+            [__webpack_require__.e("common"), __webpack_require__.e("core-kewpa21-list-list-module")]).then(__webpack_require__.bind(null,
+            /*! ../../core/kewpa21/list/list.module */
+            "./src/app/core/kewpa21/list/list.module.ts")).then(function (m) {
               return m.ListPageModule;
             });
           }
@@ -208,6 +264,34 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             [__webpack_require__.e("common"), __webpack_require__.e("core-kewpa10b-create-create-module")]).then(__webpack_require__.bind(null,
             /*! ../../core/kewpa10b/create/create.module */
             "./src/app/core/kewpa10b/create/create.module.ts")).then(function (m) {
+              return m.CreatePageModule;
+            });
+          }
+        }]
+      }, {
+        path: 'kewpa11-create',
+        children: [{
+          path: '',
+          loadChildren: function loadChildren() {
+            return Promise.all(
+            /*! import() | core-kewpa11-create-create-module */
+            [__webpack_require__.e("common"), __webpack_require__.e("core-kewpa11-create-create-module")]).then(__webpack_require__.bind(null,
+            /*! ../../core/kewpa11/create/create.module */
+            "./src/app/core/kewpa11/create/create.module.ts")).then(function (m) {
+              return m.CreatePageModule;
+            });
+          }
+        }]
+      }, {
+        path: 'kewpa21-create',
+        children: [{
+          path: '',
+          loadChildren: function loadChildren() {
+            return Promise.all(
+            /*! import() | core-kewpa21-create-create-module */
+            [__webpack_require__.e("common"), __webpack_require__.e("core-kewpa21-create-create-module")]).then(__webpack_require__.bind(null,
+            /*! ../../core/kewpa21/create/create.module */
+            "./src/app/core/kewpa21/create/create.module.ts")).then(function (m) {
               return m.CreatePageModule;
             });
           }
@@ -265,6 +349,63 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             /*! ../../core/kewpa10b/create/create.module */
             "./src/app/core/kewpa10b/create/create.module.ts")).then(function (m) {
               return m.CreatePageModule;
+            });
+          }
+        }]
+      }, {
+        path: 'kewpa11-edit/:kewpa11_id',
+        children: [{
+          path: '',
+          loadChildren: function loadChildren() {
+            return Promise.all(
+            /*! import() | core-kewpa11-create-create-module */
+            [__webpack_require__.e("common"), __webpack_require__.e("core-kewpa11-create-create-module")]).then(__webpack_require__.bind(null,
+            /*! ../../core/kewpa11/create/create.module */
+            "./src/app/core/kewpa11/create/create.module.ts")).then(function (m) {
+              return m.CreatePageModule;
+            });
+          }
+        }]
+      }, {
+        path: 'kewpa21-edit/:kewpa21_id',
+        children: [{
+          path: '',
+          loadChildren: function loadChildren() {
+            return Promise.all(
+            /*! import() | core-kewpa21-create-create-module */
+            [__webpack_require__.e("common"), __webpack_require__.e("core-kewpa21-create-create-module")]).then(__webpack_require__.bind(null,
+            /*! ../../core/kewpa21/create/create.module */
+            "./src/app/core/kewpa21/create/create.module.ts")).then(function (m) {
+              return m.CreatePageModule;
+            });
+          }
+        }]
+      }, // utils route
+      {
+        path: 'pengumuman',
+        children: [{
+          path: '',
+          loadChildren: function loadChildren() {
+            return Promise.all(
+            /*! import() | core-pengumuman-pengumuman-module */
+            [__webpack_require__.e("common"), __webpack_require__.e("core-pengumuman-pengumuman-module")]).then(__webpack_require__.bind(null,
+            /*! ../../core/pengumuman/pengumuman.module */
+            "./src/app/core/pengumuman/pengumuman.module.ts")).then(function (m) {
+              return m.PengumumanPageModule;
+            });
+          }
+        }]
+      }, {
+        path: 'homepage',
+        children: [{
+          path: '',
+          loadChildren: function loadChildren() {
+            return Promise.all(
+            /*! import() | core-homepage-homepage-module */
+            [__webpack_require__.e("common"), __webpack_require__.e("core-homepage-homepage-module")]).then(__webpack_require__.bind(null,
+            /*! ../../core/homepage/homepage.module */
+            "./src/app/core/homepage/homepage.module.ts")).then(function (m) {
+              return m.HomepagePageModule;
             });
           }
         }]

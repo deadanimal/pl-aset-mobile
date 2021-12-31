@@ -316,7 +316,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       loadChildren: function loadChildren() {
         return Promise.all(
         /*! import() | core-kewpa8-view-view-module */
-        [__webpack_require__.e("common"), __webpack_require__.e("core-kewpa8-view-view-module")]).then(__webpack_require__.bind(null,
+        [__webpack_require__.e("default~core-kewpa8-list-list-module~core-kewpa8-view-view-module"), __webpack_require__.e("core-kewpa8-view-view-module")]).then(__webpack_require__.bind(null,
         /*! ./core/kewpa8/view/view.module */
         "./src/app/core/kewpa8/view/view.module.ts")).then(function (m) {
           return m.ViewPageModule;
@@ -327,7 +327,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       loadChildren: function loadChildren() {
         return Promise.all(
         /*! import() | core-kewpa10a-list-list-module */
-        [__webpack_require__.e("common"), __webpack_require__.e("core-kewpa10a-list-list-module")]).then(__webpack_require__.bind(null,
+        [__webpack_require__.e("default~core-kewpa10a-list-list-module~core-kewpa10a-view-view-module"), __webpack_require__.e("common"), __webpack_require__.e("core-kewpa10a-list-list-module")]).then(__webpack_require__.bind(null,
         /*! ./core/kewpa10a/list/list.module */
         "./src/app/core/kewpa10a/list/list.module.ts")).then(function (m) {
           return m.ListPageModule;
@@ -338,7 +338,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       loadChildren: function loadChildren() {
         return Promise.all(
         /*! import() | core-kewpa10a-view-view-module */
-        [__webpack_require__.e("common"), __webpack_require__.e("core-kewpa10a-view-view-module")]).then(__webpack_require__.bind(null,
+        [__webpack_require__.e("default~core-kewpa10a-list-list-module~core-kewpa10a-view-view-module"), __webpack_require__.e("core-kewpa10a-view-view-module")]).then(__webpack_require__.bind(null,
         /*! ./core/kewpa10a/view/view.module */
         "./src/app/core/kewpa10a/view/view.module.ts")).then(function (m) {
           return m.ViewPageModule;
@@ -360,7 +360,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       loadChildren: function loadChildren() {
         return Promise.all(
         /*! import() | core-kewpa10b-list-list-module */
-        [__webpack_require__.e("common"), __webpack_require__.e("core-kewpa10b-list-list-module")]).then(__webpack_require__.bind(null,
+        [__webpack_require__.e("default~core-kewpa10b-list-list-module~core-kewpa10b-view-view-module"), __webpack_require__.e("common"), __webpack_require__.e("core-kewpa10b-list-list-module")]).then(__webpack_require__.bind(null,
         /*! ./core/kewpa10b/list/list.module */
         "./src/app/core/kewpa10b/list/list.module.ts")).then(function (m) {
           return m.ListPageModule;
@@ -371,7 +371,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       loadChildren: function loadChildren() {
         return Promise.all(
         /*! import() | core-kewpa10b-view-view-module */
-        [__webpack_require__.e("common"), __webpack_require__.e("core-kewpa10b-view-view-module")]).then(__webpack_require__.bind(null,
+        [__webpack_require__.e("default~core-kewpa10b-list-list-module~core-kewpa10b-view-view-module"), __webpack_require__.e("core-kewpa10b-view-view-module")]).then(__webpack_require__.bind(null,
         /*! ./core/kewpa10b/view/view.module */
         "./src/app/core/kewpa10b/view/view.module.ts")).then(function (m) {
           return m.ViewPageModule;
@@ -386,6 +386,105 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         /*! ./core/kewpa10b/create/create.module */
         "./src/app/core/kewpa10b/create/create.module.ts")).then(function (m) {
           return m.CreatePageModule;
+        });
+      }
+    }, {
+      path: 'list',
+      loadChildren: function loadChildren() {
+        return Promise.all(
+        /*! import() | core-kewpa11-list-list-module */
+        [__webpack_require__.e("common"), __webpack_require__.e("core-kewpa11-list-list-module")]).then(__webpack_require__.bind(null,
+        /*! ./core/kewpa11/list/list.module */
+        "./src/app/core/kewpa11/list/list.module.ts")).then(function (m) {
+          return m.ListPageModule;
+        });
+      }
+    }, {
+      path: 'view',
+      loadChildren: function loadChildren() {
+        return Promise.all(
+        /*! import() | core-kewpa11-view-view-module */
+        [__webpack_require__.e("common"), __webpack_require__.e("core-kewpa11-view-view-module")]).then(__webpack_require__.bind(null,
+        /*! ./core/kewpa11/view/view.module */
+        "./src/app/core/kewpa11/view/view.module.ts")).then(function (m) {
+          return m.ViewPageModule;
+        });
+      }
+    }, {
+      path: 'create',
+      loadChildren: function loadChildren() {
+        return Promise.all(
+        /*! import() | core-kewpa11-create-create-module */
+        [__webpack_require__.e("common"), __webpack_require__.e("core-kewpa11-create-create-module")]).then(__webpack_require__.bind(null,
+        /*! ./core/kewpa11/create/create.module */
+        "./src/app/core/kewpa11/create/create.module.ts")).then(function (m) {
+          return m.CreatePageModule;
+        });
+      }
+    }, {
+      path: 'list',
+      loadChildren: function loadChildren() {
+        return Promise.all(
+        /*! import() | core-kewpa21-list-list-module */
+        [__webpack_require__.e("common"), __webpack_require__.e("core-kewpa21-list-list-module")]).then(__webpack_require__.bind(null,
+        /*! ./core/kewpa21/list/list.module */
+        "./src/app/core/kewpa21/list/list.module.ts")).then(function (m) {
+          return m.ListPageModule;
+        });
+      }
+    }, {
+      path: 'create',
+      loadChildren: function loadChildren() {
+        return Promise.all(
+        /*! import() | core-kewpa21-create-create-module */
+        [__webpack_require__.e("common"), __webpack_require__.e("core-kewpa21-create-create-module")]).then(__webpack_require__.bind(null,
+        /*! ./core/kewpa21/create/create.module */
+        "./src/app/core/kewpa21/create/create.module.ts")).then(function (m) {
+          return m.CreatePageModule;
+        });
+      }
+    }, {
+      path: 'view',
+      loadChildren: function loadChildren() {
+        return Promise.all(
+        /*! import() | core-kewpa21-view-view-module */
+        [__webpack_require__.e("common"), __webpack_require__.e("core-kewpa21-view-view-module")]).then(__webpack_require__.bind(null,
+        /*! ./core/kewpa21/view/view.module */
+        "./src/app/core/kewpa21/view/view.module.ts")).then(function (m) {
+          return m.ViewPageModule;
+        });
+      }
+    }, {
+      path: 'pengumuman',
+      loadChildren: function loadChildren() {
+        return Promise.all(
+        /*! import() | core-pengumuman-pengumuman-module */
+        [__webpack_require__.e("common"), __webpack_require__.e("core-pengumuman-pengumuman-module")]).then(__webpack_require__.bind(null,
+        /*! ./core/pengumuman/pengumuman.module */
+        "./src/app/core/pengumuman/pengumuman.module.ts")).then(function (m) {
+          return m.PengumumanPageModule;
+        });
+      }
+    }, {
+      path: 'landing',
+      loadChildren: function loadChildren() {
+        return __webpack_require__.e(
+        /*! import() | core-landing-landing-module */
+        "core-landing-landing-module").then(__webpack_require__.bind(null,
+        /*! ./core/landing/landing.module */
+        "./src/app/core/landing/landing.module.ts")).then(function (m) {
+          return m.LandingPageModule;
+        });
+      }
+    }, {
+      path: 'homepage',
+      loadChildren: function loadChildren() {
+        return Promise.all(
+        /*! import() | core-homepage-homepage-module */
+        [__webpack_require__.e("common"), __webpack_require__.e("core-homepage-homepage-module")]).then(__webpack_require__.bind(null,
+        /*! ./core/homepage/homepage.module */
+        "./src/app/core/homepage/homepage.module.ts")).then(function (m) {
+          return m.HomepagePageModule;
         });
       }
     }];
@@ -749,7 +848,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var environment = {
       production: false,
-      //baseUrl: 'https://labuan-aset.prototype.com.my/'
+      // baseUrl: 'https://labuan-aset.prototype.com.my/'
       baseUrl: 'http://127.0.0.1:8000/'
     };
     /*

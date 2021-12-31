@@ -2,6 +2,7 @@ import { take } from 'rxjs/operators';
 import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
 import { ModalController, NavParams, LoadingController, AlertController } from '@ionic/angular';
 import { FormGroup, FormBuilder } from '@angular/forms';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-view',
@@ -9,9 +10,12 @@ import { FormGroup, FormBuilder } from '@angular/forms';
   styleUrls: ['./view.page.scss'],
 })
 export class ViewPage implements OnInit {
-  @Input() kewpa10b: any[];
+  @Input() kewpa10b: any;
 
   constructor(
+    private router: Router,
+    private route: ActivatedRoute,
+
     private loadingCtrl: LoadingController,
     private modalCtrl: ModalController,
     public alertController: AlertController
@@ -26,5 +30,15 @@ export class ViewPage implements OnInit {
       'dismissed': true
     });
   }
+
+  navigateToPage(path) {
+    this.router.navigate([path])
+  }
+
+  editKewpa10b() {
+    this.dismissModal();
+    this.navigateToPage('/core/kewpa10b-edit/' + this.kewpa10b.id);
+  }
+
  
 }

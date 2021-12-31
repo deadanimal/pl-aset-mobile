@@ -1,30 +1,13 @@
-<ion-header class="ion-no-border">
-  <ion-toolbar color="primary">
-    <ion-buttons slot="start">
-      <ion-button (click)="dismissModal()">
-        <ion-icon slot="icon-only" name="chevron-back-circle"></ion-icon>
-      </ion-button>
-    </ion-buttons>
 
-    <ion-title mode="ios">KEW.PA 10a No.{{kewpa10a.id}}</ion-title>
-
-    <ion-buttons slot="end">
-      <ion-button (click)="logout()">
-        <ion-icon slot="icon-only" name="log-out-outline"></ion-icon>
-      </ion-button> 
-    </ion-buttons> 
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-content>
-    <div class="card-body">
       <ion-content class="content">
-        <br>
-        <br>
-        <div class="item-start">
-          <ion-badge color="primary" style="border-radius: 110apx; padding: 4px;"> KEWPA 10a </ion-badge>
-        </div>
+        <div class="custom-figma-header ion-text-center">
+    <div class="custom-figma-title">
+      BORANG ADUAN KEROSAKAN <br />ASET ALIH<br />
+      KEW.PA-10 A
+    </div>
+  </div>
+
+  <br />
 
         <div >
           <form>
@@ -67,14 +50,31 @@
 			    	    <ion-label position="stacked" mode="ios">Pengguna Terakhir</ion-label>
 			    	    <ion-input placeholder="" value="{{kewpa10a.pengguna_terakhir}}" mode="ios" readonly></ion-input>
 			        </ion-item>
+<div  padding> 
+          <div style="padding: 20px; width: 60%; margin-left: 20%;">
+            <ion-button
+            
+              color="primary"
+              size="medium"
+              (click)="editKewpa10a()"
+              expand="block"
+            >
+              Kemaskini</ion-button
+            >
+          </div>
+        </div>
+
 
 
                              
             </ion-list>
           </form>
         </div>
-      </ion-content>
-    </div>
+  <div
+  (click)="dismissModal()"
+  class="custom-figma-right"
+></div>
+<ion-icon (click)="dismissModal()" class="custom-figma-fab-right" name="close-outline"></ion-icon>
 
-  </ion-content>
-</ion-content>
+
+      </ion-content>

@@ -4,8 +4,8 @@
 
 export const environment = {
   production: false,
-  //baseUrl: 'https://labuan-aset.prototype.com.my/'
-  baseUrl: 'http://127.0.0.1:8000/'
+  baseUrl: 'https://labuan-aset.prototype.com.my/'
+  //baseUrl: 'http://127.0.0.1:8000/'
 
 };
 

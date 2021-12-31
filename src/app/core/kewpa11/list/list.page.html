@@ -1,0 +1,49 @@
+<ion-content>
+  <div class="custom-figma-header ion-text-center">
+    <div class="custom-figma-title">
+      BORANG PEMERIKSAAN <br />ASET ALIH<br />
+      KE.WPA-11
+    </div>
+  </div>
+
+  <br />
+
+  <div id="container" class="background">
+    <div class="custom-figma-item"></div>
+
+    <ion-list *ngFor="let i of kewpa11">
+      <ion-item class="item-form">
+        <ion-input
+          (click)="viewKewpa11(i)"
+          placeholder=""
+          mode="ios"
+          value="No Rujukan {{i.id}}"
+          readonly
+        ></ion-input>
+        <div *ngIf="i.scan_status=='scanned'" class="custom-figma-button ion-text-center">
+          <ion-grid>
+            <ion-row>
+              <ion-col size="6" (click)="editKewpa11(i)">
+                <ion-icon name="create-outline"></ion-icon>
+              </ion-col>
+              <ion-col size="6" (click)="deleteKewpa11(i)">
+                <ion-icon name="trash-outline"></ion-icon>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </div>
+      </ion-item>
+    </ion-list>
+  </div>
+
+  <div class="custom-figma-bottom"></div>
+  <div (click)="scanKewpa11()" class="custom-figma-left">
+  </div>
+  <ion-icon (click)="scanKewpa11()" class="custom-figma-fab-left" name="scan-outline"></ion-icon>
+  <div
+    (click)="navigateToPage('/core/dashboard')"
+    class="custom-figma-right"
+  ></div>
+  <ion-icon (click)="navigateToPage('/core/dashboard')" class="custom-figma-fab-right" name="close-outline"></ion-icon>
+
+</ion-content>
